@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- TODO: fix this page on mobile -->
+<html lang="en" id="projects">
+<head>
+    <title>Projects | dansoloha.me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dan Soloha">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../img/icon/favicon_192.svg">
+    <link rel="shortcut icon" href="../img/icon/favicon_192.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300|Raleway:100&display=swap">
+</head>
+<body>
+    <div class="container">
+        <nav id="nav">
+            <div class="dropdown" id="top-dropdown">
+                <button onclick="toggleNav()" class="dropbtn">
+                    Projects ▾
+                </button>
+                <div class="dropdown--content" id="nav-dropdown">
+                    <a href="home.html">Home</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="projects.html" class="active" onclick="return false">Projects</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-checkbox-dropdown">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="nav" id="top-nav">
+                <a href="home.html" id="nav-icon">
+                    <img src="../img/logo_black.png" alt="logo" id="icon">
+                </a>
+                <a href="home.html" class="hover link">Home</a>
+                <a href="resume.html" class="hover link">Resume</a>
+                <button class="active link" id="active-btn">
+                    Projects
+                </button>
+                <a href="blog.html" class="hover link">Blog</a>
+                <a href="about.html" class="hover link">About</a>
+                <a href="contact.html" class="hover link">Contact</a>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-checkbox-nav">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </nav>
+        <div class="wrapper">
+            <div class="glass">
+                <header>
+                    <h1>
+                        Projects
+                    </h1>
+                </header>
+                <hr>
+                <h2 class="subtitle">
+                    Projects that I've finished will appear here.
+                </h2>
+                <ul id="project-list">
+                    <li>
+                        <a class="project-item-link" href="https://globalgamejam.org/2020/games/kwali-6" target="_blank"
+                            rel="norefferer">
+                            <div class="clearfix card project-item highlight">
+                                <div class="project-item-thumbnail">
+                                    <img src="../img/projects/kwali.png">
+                                </div>
+                                <h3 class="title">
+                                    K'wali
+                                </h3>
+                                <p>
+                                    This was a game a group of me and 5 other people created in less than 48 hours for
+                                    Global Game Jam 2020 (<a href="blog.html">you can read about that here</a>).
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-item-link" href="https://github.com/dsoloha/js/tree/master/blackjack/src" target="_blank" rel="norefferer">
+                            <div class="clearfix card project-item highlight">
+                                <div class="project-item-thumbnail">
+                                    <img src="../img/projects/blackjack.png">
+                                </div>
+                                <h3 class="title">
+                                    Blackjack
+                                </h3>
+                                <p>
+                                    This is a simple game of Blackjack utilizing HTML, CSS, and JavaScript. It has functionalities for dealing cards, tracking scores, and betting.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <footer class="footer">
+            <div class="left center-vertical">
+                <p>
+                    ©2019 Dan Soloha • All rights reserved
+                </p>
+            </div>
+            <div class="right center-vertical">
+                <ul>
+                    <li>
+                        <a target="_blank" href="">...</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="">...</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="">...</a>
+                    </li>
+                </ul>
+            </div>
+        </footer> -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/variables.js"></script>
+    <script src="../js/classes.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/events.js"></script>
+    <script src="../js/jquery.js"></script>
+</body>
+</html>

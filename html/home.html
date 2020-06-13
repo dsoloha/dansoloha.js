@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+<head>
+    <title>Home | dansoloha.me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dan Soloha">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="IwZYOb7jxX-N8r-Hwg4WpK000xE0Dzh83sT_laGD1e0">
+    <link rel="shortcut icon" href="../img/icon/favicon_192.svg">
+    <link rel="shortcut icon" href="../img/icon/favicon_192.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300|Raleway:100&display=swap">
+</head>
+<body class="container noscroll">
+    <!-- TODO: add animation to dropdown -->
+    <nav id="nav">
+        <div class="dropdown" id="top-dropdown">
+            <button onclick="toggleNav()" class="dropbtn">
+                Home ▾
+            </button>
+            <div class="dropdown--content" id="nav-dropdown">
+                <a href="home.html" class="active" onclick="return false">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-checkbox-dropdown">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="nav" id="top-nav">
+            <a href="home.html" id="nav-icon">
+                <img src="../img/logo_black.png" alt="logo" id="icon">
+            </a>
+            <button class="active link" id="active-btn">
+                Home
+            </button>
+            <a href="resume.html" class="hover link">Resume</a>
+            <a href="projects.html" class="hover link">Projects</a>
+            <a href="blog.html" class="hover link">Blog</a>
+            <a href="about.html" class="hover link">About</a>
+            <a href="contact.html" class="hover link">Contact</a>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-checkbox-nav">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="glass center">
+            <header>
+                <h1 id="home-main-text">
+                    Hi.
+                </h1>
+            </header>
+            <hr>
+            <h2 class="title">
+                My name is Dan. I'm a full stack developer based in Columbus, Ohio.
+            </h2>
+            <h4 class="subtitle">
+                Please hire me.
+            </h4>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/variables.js"></script>
+    <script src="../js/classes.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/events.js"></script>
+    <script src="../js/jquery.js"></script>
+</body>
+</html>

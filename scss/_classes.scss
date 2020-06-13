@@ -1,0 +1,486 @@
+@import "variables";
+@import "mixins";
+
+/* CLASSES */
+
+.center {
+    text-align: center;
+}
+
+.center-vertical {
+    position: relative;
+
+    h1,
+    h2,
+    h3,
+    p {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.container {
+    display: block;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.float {
+    &__right {
+        float: right;
+    }
+
+    &__left {
+        float: left;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.glass {
+    @include glass-light;
+    border-radius: 10px;
+    padding: 0px 50px 25px;
+
+    &:empty::after {
+        @include skeleton;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.highlight {
+    @include highlight-light;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.noscroll {
+    overflow: hidden;
+    position: fixed;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.border-left {
+    border-left: solid white 1px;
+    padding: 0px 0px 0px 25px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.wrapper {
+    margin: 125px auto;
+    width: 70%;
+}
+
+/* font stylings */
+
+.title {
+    font-size: 4vh;
+    font-weight: 300;
+    margin: 25px 0px 0px;
+}
+
+.subtitle {
+    color: $secondary-color-light;
+    font-family: $font-alt;
+    font-size: 4vh;
+    font-style: oblique;
+    font-weight: 100;
+}
+
+.body {
+    line-height: 1.75;
+    padding: 20px;
+}
+
+.time {
+    color: $secondary-color-light;
+    font-family: $font-alt;
+    font-weight: 100;
+}
+
+.footnote {
+    color: $secondary-color-light;
+    font-family: $font-alt;
+    font-size: 2vh;
+    font-weight: 100;
+}
+
+/* buttons */
+
+.button {
+    border: none;
+    cursor: pointer;
+    font-family: $font;
+
+    &:hover {
+        filter: brightness(115%);
+    }
+}
+
+/* nav */
+
+.nav {
+    @include glass-light;
+    display: inline-block;
+    height: 75px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+
+    .link {
+        padding: 30px 20px;
+    }
+
+    a, button {
+        border: none;
+        float: left;
+        height: 100%;
+        text-decoration: none;
+    }
+
+    img {
+        float: left;
+        margin: 0px 25px;
+    }
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: default;
+    font-family: $font;
+    height: 100%;
+    margin: 0;
+    z-index: inherit;
+}
+
+.dropbtn {
+    @include glass-light;
+    border: none;
+    cursor: pointer;
+    font-family: $font;
+    font-size: 16px;
+    height: 75px;
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.dropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 9998;
+
+    a:hover {
+        @include glass-light;
+    }
+
+    &--content {
+        @include glass-light;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        display: none;
+        min-width: 160px;
+        overflow: auto;
+        position: absolute;
+        top: 75px;
+        transition: all .5s ease;
+        width: 100vw;
+        z-index: 9999;
+
+        a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+    }
+}
+
+.show {
+    display: block;
+}
+
+/* dark mode toggle */
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    &-wrapper {
+        align-items: center;
+        display: block;
+        float: right;
+        padding: 21px; // center vertically - there must be a better way to do this
+
+        em {
+            font-size: 1rem;
+            margin-left: 10px;
+        }
+    }
+}
+
+// TODO: rework this entire slider without pxs
+.slider {
+    @include glass-light;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+
+    &:before {
+        background-color: $primary-color-light;
+        bottom: 4px;
+        content: "";
+        height: 26px;
+        left: 4px;
+        position: absolute;
+        width: 26px;
+    }
+
+    &.round {
+        border-radius: 34px;
+
+        &:before {
+            border-radius: 50%;
+            // TODO: get toggle switch animation to work
+            // -webkit-transition: .4s;
+            // transition: .4s;
+        }
+    }
+}
+
+input:checked+.slider {
+    @include glass-dark;
+
+    &:before {
+        background-color: $primary-color-dark;
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+        // TODO: get toggle switch animation to work
+        // -webkit-transition: .4s;
+        // transition: .4s;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 4px;
+        -webkit-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+}
+
+/* footer */
+
+.footer {
+    @include glass-light;
+    bottom: 0;
+    height: 75px;
+    padding: 0 25px;
+    position: absolute;
+    width: 100vw;
+    z-index: 9999;
+    margin-top: 25px;
+
+    li {
+        vertical-align: middle;
+    }
+
+    p {
+        font-size: 1.5em;
+        padding: 0;
+        margin: 0;
+    }
+
+    .right {
+        float: right;
+        clear: both;
+    }
+}
+
+.hover:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    height: 100%;
+    z-index: inherit;
+}
+
+.blog-post {
+    @include glass-light;
+    line-height: normal;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 10px;
+
+    .title {
+        float: left;
+        width: 50%;
+    }
+
+    .subtitle, .body {
+        clear: both;
+    }
+
+    .subtitle {
+        font-size: 3vh;
+    }
+
+    .body {
+        padding: 10px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    .time {
+        float: right;
+        text-align: right;
+        font-size: 4vh;
+        width: 30%;
+        margin: 25px 0;
+    }
+}
+
+.card {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* project list */
+
+.project-item {
+    box-sizing: border-box;
+    clear: both;
+    margin: 25px 0;
+    padding: 25px;
+    width: 100%;
+
+    h3,
+    p {
+        float: right;
+        width: 50%;
+    }
+
+    h3 {
+        text-align: center;
+        margin: 0;
+        display: inline-block;
+    }
+
+    li {
+        background-color: transparent;
+    }
+
+    &-link {
+        text-decoration: none;
+    }
+    &-thumbnail {
+        box-sizing: border-box;
+        float: left;
+        height: auto;
+        width: 50%;
+        padding-right: 25px;
+
+        img {
+            border-radius: 5px;
+        }
+    }
+}
+
+/* modal */
+
+.modal {
+    @include glass-dark;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal--content {
+    @include glass-light;
+    margin: 10% auto;
+    padding: 20px;
+    width: 30%;
+}
+
+.modal--close {
+    @include glass-light;
+    color: $font-color-light;
+    float: right;
+    font-family: $font;
+    font-size: 28px;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+/* tooltip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+    &--text {
+        @include highlight-light;
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &:hover &--text {
+        visibility: visible;
+    }
+}

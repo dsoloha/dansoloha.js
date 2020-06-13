@@ -1,0 +1,33 @@
+{
+  "name": "dansoloha.me",
+  "version": "1.0.0",
+  "description": "Dan Soloha's personal website",
+  "main": "home.html",
+  "devDependencies": {
+    "autoprefixer": "^9.7.2",
+    "postcss-cli": "^6.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-run-all --parallel live-server watch",
+    "liveserver": "live-server",
+    "compile": "node-sass sass/main.scss css/main.css",
+    "prefix": "postcss css/main.css --use autoprefixer -o css/main.css",
+    "compress": "node-sass css/main.css css/main.css --output-style compressed",
+    "build": "npm-run-all compile prefix compress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/dsoloha/pages/dansoloha.me"
+  },
+  "keywords": [
+    "dan",
+    "soloha",
+    "portfolio",
+    "website",
+    "personal"
+  ],
+  "author": "Dan Soloha",
+  "license": "ISC",
+  "dependencies": {}
+}

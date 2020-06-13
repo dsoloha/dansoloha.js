@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" id="blog">
+<head>
+    <title>Blog | dansoloha.me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dan Soloha">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../img/icon/favicon_192.svg">
+    <link rel="shortcut icon" href="../img/icon/favicon_192.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300|Raleway:100&display=swap">
+</head>
+<body>
+    <div class="container">
+        <nav id="nav">
+            <div class="dropdown" id="top-dropdown">
+                <button onclick="toggleNav()" class="dropbtn">
+                    Blog ▾
+                </button>
+                <div class="dropdown--content" id="nav-dropdown">
+                    <a href="home.html">Home</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html" class="active" onclick="return false">Blog</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch">
+                            <input type="checkbox" id="theme-checkbox-dropdown">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="nav" id="top-nav">
+                <a href="home.html" id="nav-icon">
+                    <img src="../img/logo_black.png" alt="logo" id="icon">
+                </a>
+                <a href="home.html" class="hover link">Home</a>
+                <a href="resume.html" class="hover link">Resume</a>
+                <a href="projects.html" class="hover link">Projects</a>
+                <button class="active link" id="active-btn">
+                    Blog
+                </button>
+                <a href="about.html" class="hover link">About</a>
+                <a href="contact.html" class="hover link">Contact</a>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-checkbox-nav">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </nav>
+        <div class="wrapper">
+            <div class="glass">
+                <header>
+                    <h1>
+                        Blog
+                    </h1>
+                </header>
+                <hr>
+                <h2 class="subtitle">
+                    Projects that I'm working on will appear here.
+                </h2>
+                <div id="blog-posts">
+                    <!-- TODO: create blog post API -->
+                    <div class="blog-post">
+                        <div class="title">
+                            Global Game Jam 2020
+                        </div>
+                        <time datetime="2020-03-02" class="time">
+                            03/02/2020
+                        </time>
+                        <h4 class="subtitle">
+                            As stressful as it was fun
+                        </h4>
+                        <p class="body highlight">
+                            Yes, it been a while since I've posted on here, but not much has really happened since last time - I've mostly just been working, and I did go back to school in January, but besides that, things have been pretty quiet. Until this past weekend, that is. This weekend was Global Game Jam, and I went, and I'm glad I did.
+                            <br>
+                            For those of you that are unfamiliar with the concept of a game jam, basically, you have a certain amount of time to create some type of game (people usually create video games, but you could create board games, for example, if you wanted to). We had 48 hours for this one. We were all put into groups based on which position we signed up for, and I was put into a group of five other people – two other programmers, two artists, and a sound designer.
+                            <br>
+                            The theme of the game jam this year was "repair", so after throwing around some ideas, we finally settled on a game that involved a fire-fighting koala (yes, it's as cute as it sounds). We decided to use Unity for the game engine, and so I basically learned C# in one day. After working right up until the deadline, we were finally ready to present our <sup>mostly</sup> working product. If you're interested, you can <a href="projects.html">check it out here</a>.
+                        </p>
+                    </div>
+
+                    <div class="blog-post">
+                        <div class="title">
+                            Merry Christmas!
+                        </div>
+                        <time datetime="2019-12-24" class="time">
+                            12/24/2019
+                        </time>
+                        <h4 class="subtitle">
+                            And Happy New Years!
+                        </h4>
+                        <p class="body highlight">
+                            I hope everyone is having a wonderful Christmas! It's been nice to get some time off of work to spend with friends and family, and I've also had some time to work on my side projects some more, as well. I've just about finished my Blackjack game, adding in a system to track the players "money" and allow for betting. All I really have left to do is some bugfixing and potentially allowing for more than one player, though we'll see how realistic of a goal that is (I imagine I might not even do that at all, as the whole of Simple Blackjack is for it to be, well, simple). I think pretty soon, after I finish up polishing this game, I'll start a new project, though I don't think I'll do a game. I think I'll probably create my own "to-do list" app, or something that uses an actual API online. I think it's about time I started getting more serious with HTTP and the like, and what better way to do that than to create an app or a program that will do just that?
+                        </p>
+                    </div>
+                    <div class="blog-post">
+                        <h2 class="title">
+                            Nearing Completion
+                        </h2>
+                        <time datetime="2019-12-09" class="time">
+                            12/09/2019
+                        </time>
+                        <h4 class="subtitle">
+                            We're getting there
+                        </h4>
+                        <p class="body highlight">
+                            This is basically the finished version of my site, for the time being. I'll still keep adding things to it and updating, as well as maybe doing the occasional code cleaning, but for the most part, this is how the site is going to look and feel. I do plan on still adding a fair bit of functionality, though, such as something that'll allow me to make these blog posts from the site and not from within the raw code. Other than that, though, there's not really a whole lot going on. I am still working on a Blackjack game I started a while ago, but I'm in a bit of a rut at the moment and don't really know where to go from here, so I might just end up deciding to redo large parts of it (or the entire thing, we'll see). I <i>do</i> want to get it done, though, if only so I can start filling out my <a href="projects.html">Projects</a> page.
+                        </p>
+                    </div>
+                    <div class="blog-post">
+                        <h2 class="title">
+                            Behind the Scenes
+                        </h2>
+                        <time datetime="2019-12-06" class="time">
+                            12/06/2019
+                        </time>
+                        <h4 class="subtitle">
+                            Getting stuff to work
+                        </h4>
+                        <p class="body highlight">
+                            Though it might not be glaringly obvious at first, I've done some work behind the scenes. I've basically completely rewritten the code handling the theme switcher, for example, and now the theme stays consistent as you move between pages. I've also finally started incorporating jQuery in the code — I really don't know why I waited so long to finally start, but here we are. I actually rewrote the aforementioned theme switcher with jQuery, which may or may not be why it works now. The initial setup of the site is getting closer and closer to completion, thought there is definitely still a list of things I want to add before I call it good (animations, for example).
+                        </p>
+                    </div>
+                    <div class="blog-post">
+                        <h2 class="title">
+                            Making Connections
+                        </h2>
+                        <time datetime="2019-11-26" class="time">
+                            11/26/2019
+                        </time>
+                        <h4 class="subtitle">
+                            It's starting to look a bit less empty
+                        </h4>
+                        <p class="body highlight">
+                            I've begun to add links here and there across the site, which the eagle-eyed among you may have noticed. There are links to different resources on my <a href="resume.html">resume</a> as well as a few on my <a href="about.html">about page</a>. I've also added in a toggle for dark mode! I'm still ironing out the kinks in it, and I'll have to rework the entire backend of it, but for now, it <sup>mostly</sup> works! Next I think I'll focus on my <a href="projects.html">projects page</a> and adding more content to that and adding some cool effects to it, but one thing at a time, right?
+                        </p>
+                    </div>
+                    <div class="blog-post">
+                        <h2 class="title">
+                            More Changes
+                        </h2>
+                        <time datetime="2019-11-21" class="time">
+                            11/21/2019
+                        </time>
+                        <h4 class="subtitle">
+                            Work, work, work
+                        </h4>
+                        <p class="body highlight">
+                            You may or may not have noticed, but things look a bit different around here. I've put in quite a bit of time tweaking the look and feel of things, and this site now works on mobile! I haven't been able to test the site on a physical phone, so maybe there are still some bugs I need to work out, but if Safari's Responsive Mode works correctly (and I really hope it does), it should be a lot easier to use the site on mobile. I still have some plans for this site, so stay tuned!
+                        </p>
+                    </div>
+                    <div class="blog-post">
+                        <h2 class="title">
+                            A New Frontier
+                        </h2>
+                        <time datetime="2019-10-29" class="time">
+                            10/29/2019
+                        </time>
+                        <h4 class="subtitle">
+                            The beginning of something great?
+                        </h4>
+                        <p class="body highlight">
+                            You might have noticed this is the first post here. Hopefully, it'll be the first of many, but I suppose only time will tell. Truth be told, I don't really have a plan for this blog - I suppose it'll just be my personal musings and thoughts on things that are going on, or ideas that I have that I might want some feedback on. I'm really not much of a writer, so don't expect to see anything super impressive here. Anyways, for this first post, I think I'll just keep it short and simple: if this is your first time visiting, welcome. If you're coming back for more, then it's nice to see you again.
+                        </p>
+                    </div>
+                    <!-- TODO: add API here -->
+                    <div class="new-post">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <footer class="footer">
+            <div class="left center-vertical">
+                <p>
+                    ©2019 Dan Soloha • All rights reserved
+                </p>
+            </div>
+            <div class="right center-vertical">
+                <ul>
+                    <li>
+                        <a target="_blank" href="">...</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="">...</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="">...</a>
+                    </li>
+                </ul>
+            </div>
+        </footer> -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/variables.js"></script>
+    <script src="../js/classes.js"></script>
+    <script src="../js/functions.js"></script>
+    <script src="../js/events.js"></script>
+    <script src="../js/jquery.js"></script>
+</body>
+</html>

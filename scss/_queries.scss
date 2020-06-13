@@ -1,0 +1,110 @@
+@import "variables";
+@import "mixins";
+
+//  QUERIES  //
+
+@media screen and (max-width: $break-medium) {
+    header h1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .dropdown {
+        display: inline;
+        a:hover.active {
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: default;
+            height: 100%;
+            margin: 0;
+            z-index: inherit;
+        }
+    }
+
+    .glass {
+        padding: 10px;
+        margin: 100px 10px 25px;
+    }
+
+    .theme-switch-wrapper {
+        float: none;
+        margin: auto;
+        width: fit-content;
+    }
+
+    .blog-post {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .blog-post .time {
+        clear: both;
+        margin: 10px 0;
+        float: left;
+    }
+
+    .subtitle, .title {
+        margin: 25px;
+    }
+
+    .clearfix {
+        margin: 0;
+    }
+
+    #nav-icon {
+        margin: 0;
+    }
+
+    #dropdown-caret {
+        display: inline;
+    }
+
+    #hiring-points {
+        li {
+            white-space: normal;
+            margin: 5px 0px;
+        }
+        ul {
+            padding: 5px;
+        }
+    }
+
+    #project-list {
+        margin: 0;
+    }
+
+    #project-item {
+        margin: 0;
+        h3, p {
+            width: 100%;
+        }
+        h3 {
+            text-align: center;
+        }
+        p {
+            text-align: left;
+        }
+    }
+
+    #project-item-thumbnail {
+        margin: auto;
+        width: 111%;    // doesn't want to actually take up the space otherwise
+    }
+}
+
+@media screen and (min-width: $break-medium + 1) {
+    .dropdown {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+
+}

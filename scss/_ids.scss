@@ -1,0 +1,97 @@
+@import "variables";
+@import "mixins";
+
+/* IDS */
+
+#home-main-text {
+    font-size: 10rem;
+    font-weight: 300;
+    margin: 2rem;
+}
+
+#nav {
+    transition: all .5s ease;
+
+    &.scroll-up {
+        transform: translateY(-75px);
+    }
+}
+
+#nav-icon {
+    img {
+        max-height: 100%;
+        max-width: auto;
+    }
+
+    a {
+        padding: 0px;
+        top: 0;
+    }
+}
+
+#dropdown-caret {
+    display: none;
+}
+
+#home {
+    @include full-pic;
+    background-image: linear-gradient(to right, #3d4f4c 0%, #50656d 50%, #51708a 75%, #3b5a76 100%);
+    background-image: url("../img/background/mountain01.jpg");
+
+    .subtitle {
+        font-size: 2.5vh;
+    }
+}
+
+#resume {
+    @include full-pic;
+    background-image: linear-gradient(to right, #89acc6 0%, #7e9fb9 50%, #6b91b0 75%, #6995bb 100%);
+    background-image: url("../img/background/mountain02.jpg");
+}
+
+#projects {
+    @include full-pic;
+    background-image: linear-gradient(to right, #708b9e 0%, #6c90a6 50%, #7296a9 75%, #7290a4 100%);
+    background-image: url("../img/background/mountain03.jpg");
+}
+
+#blog {
+    @include full-pic;
+    background-image: linear-gradient(to right, #404c4a 0%, #4e5a59 50%, #68716e 75%, #6b7475 100%);
+    background-image: url("../img/background/mountain04.jpg");
+}
+
+#about {
+    @include full-pic;
+    background-image: linear-gradient(to right, #5d656d 0%, #6e848e 50%, #6e7e8f 75%, #5a697a 100%);
+    background-image: url("../img/background/mountain05.jpg");
+}
+
+#contact {
+    @include full-pic;
+    background-image: linear-gradient(to right, #6a7665 0%, #7498b6 50%, #577c93 75%, #4a7185 100%);
+    background-image: url("../img/background/mountain06.jpg");
+}
+
+#project-list {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+/* resume */
+
+#hiring-points {
+    li {
+        @include highlight-light;
+        list-style-position: inside;
+        margin: 10px;
+        padding: 5px 10px;
+    }
+
+    ul {
+        padding: 10px;
+    }
+}

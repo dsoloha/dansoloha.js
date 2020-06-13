@@ -1,0 +1,84 @@
+@import "variables";
+@import "mixins";
+
+/* ELEMENTS */
+
+* {
+    /* border: 1px solid black;             /* strictly for testing */
+    color: $font-color-light;               /* default text color */
+    font-family: $font;                     /* default typeface */
+    font-size: 1rem;                        /* default font size */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-attachment: fixed;
+    background-color: white;
+}
+
+body {
+    font-size: 62.5%;
+    width: 100%;
+}
+
+header {
+    padding: 25px 10px 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: $font;
+    font-size: 4.5rem;
+    font-weight: 300;
+}
+
+form {
+    padding: 20px 0px;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    @include glass-light;
+    background-color: rgba($color: $primary-color-light, $alpha: $highlight-opacity);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 15px;
+    margin: 15px 0px;
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ul {
+    line-height: 2;
+}
+
+li {
+    width: auto;
+}
+
+hr {
+    background-color: $font-color-light;
+    border: none;
+    height: 1px;
+}
+
+sup {
+    font-size: 0.7rem;
+}
+
+::placeholder {
+    color: $font-color-light;
+    font-family: $font;
+}

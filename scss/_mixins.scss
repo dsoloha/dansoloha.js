@@ -1,0 +1,41 @@
+@import "variables";
+
+//  MIXINS  //
+
+@mixin glass-light {
+    background-color: rgba($color: $primary-color-light, $alpha: $glass-opacity);
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+}
+
+@mixin glass-dark {
+    background-color: rgba($color: $primary-color-dark, $alpha: $glass-opacity);
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+}
+
+@mixin highlight-light {
+    background-color: rgba($color: $primary-color-light, $alpha: $highlight-opacity);
+    border-radius: 5px;
+}
+
+@mixin highlight-dark {
+    background-color: rgba($color: $primary-color-dark, $alpha: $highlight-opacity);
+    border-radius: 5px;
+}
+
+@mixin full-pic {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+@mixin skeleton {
+    background-repeat: no-repeat;
+    background-image:
+        linear-gradient(gray 100%, transparent 0%);
+    background-size:
+        100% 100%;
+    
+}
