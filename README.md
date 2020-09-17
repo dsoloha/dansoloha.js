@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is the main repository for my website, [dansoloha.me](https://dansoloha.me). This is where I do the majority of my testing and expirementing before any code live.
+This is the main repository for my website, [dansoloha.me](https://dansoloha.me). This is where I do the majority of my testing and expirementing before pushing any code live.
 
 ## Can I contribute?
 
@@ -10,4 +10,4 @@ Absolutely! I'm open to any and all suggestions, and if you have any code you'd 
 
 ## I've found a bug!
 
-I'm not surpised - I'm still relatively new to HTML, CSS, and JavaScript. You can open a new issue and I'll try to fix it, or, if you want to fix it yourself, you can do that, then open a new pull request.
+You can open a new issue and I'll try to fix it, or, if you want to fix it yourself, you can do that, then open a new pull request.
