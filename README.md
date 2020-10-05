@@ -2,7 +2,7 @@
 
 ## About
 
-This is the main repository for my website, [dansoloha.me](https://dansoloha.me). This is where I do the majority of my testing and experimenting before any code live.
+This is the main repository for my website, [dansoloha.me](https://dansoloha.me). This is where I do the majority of my testing and experimenting before pushing any code live.
 
 ## Contributing
 
